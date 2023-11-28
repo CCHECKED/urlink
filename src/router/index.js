@@ -17,6 +17,15 @@ const routes = [
       return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
     },
   },
+  {
+    path: "/:id",
+    name: "redirect",
+    component: function () {
+      return import(
+        /* webpackChunkName: "redirect" */ "../views/RedirectView.vue"
+      );
+    },
+  },
 ];
 
 const router = createRouter({
